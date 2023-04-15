@@ -322,6 +322,7 @@ p {
 
 .projects-holder {
 	padding: 30px 15px 0px 15px;
+	margin-top: 20px !important;
 }
 
 .filter-categories {
@@ -830,7 +831,7 @@ footer .connect-us ul li a:hover {
 		padding-top: 100px;
 		padding-bottom: 100px;
 		background-color: #33c1cf;
-		height: 440px;
+		height: 390px;
 		margin-left: -15px;
 		padding-left: 0vh;
 		margin-right: -15px;
@@ -857,7 +858,7 @@ footer .connect-us ul li a:hover {
 
 	#blog .section-heading {
 		text-align: center;
-		padding-top: 100px;
+		padding-top: 60px;
 		padding-bottom: 100px;
 		background-color: rgba(0, 0, 0, 0.5);
 		margin-left: -15px;
@@ -914,6 +915,14 @@ footer .connect-us ul li a:hover {
 		margin-left: 10px;
 	}
 
+	.hovercap{
+		position: relative !important;
+		visibility: visible !important;
+	}
+	.hoverwrap .box-limit .hovercap {
+		visibility: visible;
+		opacity: 1;
+	}
 }
 
 @media (max-width: 768px) {
@@ -982,7 +991,7 @@ footer .connect-us ul li a:hover {
 	position: absolute;
 	background: #272727;
 	z-index: 999999;
-	
+
 }
 
 .txt {
@@ -1032,4 +1041,46 @@ footer .connect-us ul li a:hover {
 		transform: scale(1.0);
 		opacity: 0;
 	}
+}
+
+/* Item Image Hover */
+
+.hovercap {
+	/* (B1) PLACE AT BOTTOM */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	/* (B2) DIMENSIONS + COLORS */
+	width: 100%;
+	padding: 10px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	/* (B3) VISIBILITY */
+	visibility: none;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.hovercap:hover{
+	background-color: rgba(8, 6, 142, 0.745);
+	transition: 0.3s;
+}
+
+.hoverwrap:hover .box-limit .hovercap {
+	visibility: visible;
+	opacity: 1;
+}
+
+.box-limit{
+	position: relative;
+}
+
+.hovercap-text{
+	color: white !important;
+    font-size: 14px !important;
+    line-height: 10px !important;
+	margin: 0px;
+	display: inline-flex;
 }
